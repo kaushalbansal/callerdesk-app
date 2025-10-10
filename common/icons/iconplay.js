@@ -1,0 +1,17 @@
+import React from 'react';
+import { SvgXml } from 'react-native-svg';
+import PropTypes from 'prop-types';
+
+export const IconPlay = ({ size = 18, color = '#333333' }) => {
+  return (
+    <SvgXml
+      xml={`<svg width="${size}" height="${size}" fill="${color}" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6.234 20.625c-.287 0-.57-.076-.82-.219a1.843 1.843 0 0 1-.912-1.609V5.203c0-.673.35-1.29.912-1.609a1.647 1.647 0 0 1 1.677.021l11.618 6.954a1.686 1.686 0 0 1 0 2.86l-11.62 6.956a1.664 1.664 0 0 1-.855.24Z"></path>
+    </svg>`}
+    />
+  );
+};
+IconPlay.propTypes = {
+  size: PropTypes.number,
+  color: PropTypes.string,
+};

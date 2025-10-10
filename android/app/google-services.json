@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "4855411810",
+    "project_id": "callerdesk-8f81b",
+    "storage_bucket": "callerdesk-8f81b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:4855411810:android:ff50c2f0c30d38dd774d3b",
+        "android_client_info": {
+          "package_name": "com.callerdesk"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8INwpVg46zzZPwdHViEKLvQEpzunBnRY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
