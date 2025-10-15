@@ -8,7 +8,7 @@ import store from '../store';
 import { startLoading, stopLoading } from './common';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { NativeModules } from 'react-native';
-const { CallLogModule } = NativeModules;
+const { SimLogsModule } = NativeModules;
 const CACHE_TTL = 1000 * 60 * 5;
 
 export const getCallLogList = async (authCode, data) => {
@@ -577,7 +577,7 @@ export const getSimCallLog=({pageNumber=0, status="total", from=null, to=null, r
       }
 
       // Pass the page to fetch to the native module
-      const entries = await CallLogModule.getCallLogsPageWithFilter(pageNumber, status, fromTs, toTs);
+      const entries = await SimLogsModule.getCallLogsPageWithFilter(pageNumber, status, fromTs, toTs);
       
 
       if (pageNumber === 0) {
@@ -629,7 +629,7 @@ export const fetchSimCallLogCount = ({ status = 'total', from, to } = {}) => {
       }
 
       
-      const count = await CallLogModule.getFilteredCallLogsCount(status, from, to);
+      const count = await SimLogsModule.getFilteredCallLogsCount(status, from, to);
       // merge meta (do not clobber other fields)
       const newMeta = {
         ...meta,
